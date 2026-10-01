@@ -1,0 +1,72 @@
+/*
+ * RECICLA.IA — ESTILOS DO GRUPO
+ * Edite SOMENTE as variáveis :root para mudar a identidade visual.
+ * A estrutura do HTML e a lógica da IA ficam em arquivos separados.
+ */
+:root {
+  color-scheme: dark;
+  --bg: #172554;           /* fundo principal */
+  --panel: #2563eb;        /* cartões */
+  --line: #1e293b;         /* bordas */
+  --text: #f8fafc;         /* texto principal */
+  --muted: #f8fafc;        /* texto secundário */
+  --accent: #64748b;       /* botões e destaques */
+  --accent-text: #172554;  /* texto sobre botão */
+  --secondary: #334155;    /* botões secundários */
+  --secondary-text: #f8fafc;
+  --warning-bg: #332b1e;
+  --warning-border: #69512e;
+  --warning-text: #fbe1ad;
+  --error: #ffb1a5;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 85% 0, #203c2d 0, transparent 420px), var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.wrap { width: min(100%, 720px); margin: 0 auto; padding: 26px 16px 42px; }
+.brand { display: flex; align-items: center; gap: 13px; margin-bottom: 20px; }
+.brand__icon { width: 54px; height: 54px; border-radius: 16px; object-fit: contain; flex: none; }
+h1 { font-size: 30px; letter-spacing: -1px; margin: 0; line-height: 1.1; }
+.subtitle { color: var(--muted); font-size: 13px; margin-top: 5px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 21px; padding: 19px; margin: 14px 0; }
+.eyebrow { color: var(--accent); font-size: 12px; letter-spacing: .11em; text-transform: uppercase; font-weight: 800; }
+h2 { font-size: 24px; line-height: 1.2; margin: 10px 0 9px; letter-spacing: -.5px; }
+h2.eyebrow { font-size: 12px; margin: 0; }
+p { line-height: 1.55; color: var(--muted); margin: 10px 0 16px; }
+.tag { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; color: var(--muted); font-size: 12px; }
+.actions, .camera-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.camera-actions { margin-top: 12px; }
+.action {
+  width: 100%; min-height: 54px; display: flex; align-items: center;
+  justify-content: center; gap: 6px; padding: 12px; border: 0;
+  border-radius: 13px; background: var(--accent); color: var(--accent-text);
+  font-family: inherit; font-size: 15px;
+  line-height: 1.25; font-weight: 800; text-align: center; cursor: pointer;
+}
+.action:disabled, fieldset[disabled] .action { opacity: .55; cursor: not-allowed; }
+.action.secondary { background: var(--secondary); color: var(--secondary-text); border: 1px solid #3c654e; }
+.action:focus-visible, .file:focus-visible + label { outline: 3px solid #ffffff; outline-offset: 3px; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.file { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; clip-path: inset(50%); }
+.hint { font-size: 13px; min-height: 1.4em; margin: 12px 0 0; }
+.hint.bad { color: var(--error); }
+#liveVideo, #preview { width: 100%; max-height: 420px; object-fit: contain; background: #050b08; border-radius: 14px; display: block; }
+#preview { background: #ffffff; margin: 12px 0 18px; }
+[hidden] { display: none !important; }
+.result { border: 1px solid #3a6148; background: #173328; border-radius: 15px; padding: 15px; margin-top: 11px; }
+.reslabel { font-size: 11px; letter-spacing: .12em; color: var(--accent); font-weight: 800; }
+.prediction { font-size: 28px; font-weight: 900; line-height: 1.3; margin-top: 4px; overflow-wrap: anywhere; }
+.score { font-size: 14px; color: #dcebe0; }
+.bars { display: grid; gap: 11px; margin: 18px 0; }
+.barhead { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: 650; margin-bottom: 5px; }
+.barbg { height: 10px; background: #294034; border-radius: 99px; overflow: hidden; }
+.barfill { height: 100%; background: var(--accent); border-radius: 99px; transition: width .24s ease; }
+.caution { background: var(--warning-bg); border: 1px solid var(--warning-border); border-radius: 12px; padding: 11px 13px; color: var(--warning-text); font-size: 13px; line-height: 1.45; }
+.small { font-size: 12px; line-height: 1.55; color: var(--muted); }
+footer { text-align: center; color: #91b29f; font-size: 12px; padding: 10px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 390px) { .actions, .camera-actions { grid-template-columns: 1fr; } h1 { font-size: 27px; } .wrap { padding: 16px 12px; } }
+@media (prefers-reduced-motion: reduce) { .barfill { transition: none; } }

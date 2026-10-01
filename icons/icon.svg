@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#102c20"/>
+<circle cx="256" cy="256" r="154" fill="#194331" stroke="#32654b" stroke-width="2"/>
+<circle cx="256" cy="256" r="123" fill="none" stroke="#b1fa8a" stroke-width="18" stroke-dasharray="230 70 135 338" stroke-linecap="round" transform="rotate(-42 256 256)"/>
+<!-- Recycled object: bold vessel silhouette inside a circular flow -->
+<path d="M214 184 h84 a15 15 0 0 1 15 15 v123 a17 17 0 0 1 -17 17 h-80 a17 17 0 0 1 -17 -17 v-123 a15 15 0 0 1 15 -15 z" fill="#b1fa8a" />
+<path d="M226 165 h60 v26 h-60 z" fill="#b1fa8a" />
+<path d="M231 217 h51 v62 h-51z" fill="#102c20" opacity=".18" />
+<!-- Three connected data points hint at machine learning -->
+<path d="M233 257 l27 -21 26 27" fill="none" stroke="#153f29" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="233" cy="257" r="9" fill="#153f29"/>
+<circle cx="260" cy="236" r="9" fill="#153f29"/>
+<circle cx="286" cy="263" r="9" fill="#153f29"/>
+<!-- Two legible rotation arrowheads -->
+<path d="M373 174 l22 -13 -3 31 z" fill="#b1fa8a"/>
+<path d="M122 331 l-14 26 34 -3 z" fill="#b1fa8a"/>
+</svg>
